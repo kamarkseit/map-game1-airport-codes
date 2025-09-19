@@ -12,8 +12,18 @@ def Main():
     import os
 
     BASE_DIR = os.path.dirname(__file__)
-    answers_path = os.path.join(BASE_DIR, 'gamer_answers.csv')
-    correct_path = os.path.join(BASE_DIR, 'correct_answers.csv')
+    gamer_answers_path = os.path.join(BASE_DIR, 'data', 'gamer_answers.csv')
+    correct_answers_path = os.path.join(BASE_DIR, 'data', 'correct_answers.csv')
+    correct_data_path = os.path.join(BASE_DIR, 'data', 'correct_data.csv')
+    gamer_data_path = os.path.join(BASE_DIR, 'data', 'gamer_data.csv')
+    tile_path = os.path.join(BASE_DIR, 'assets', 'tiles')
+    map_img_path = os.path.join(BASE_DIR, 'assets', 'AllegiantMap.png')
+    calc_img_path = os.path.join(BASE_DIR, 'assets', 'calc_img.png')
+    again_img_path = os.path.join(BASE_DIR, 'assets', 'again_img.png')
+    blank_img_path = os.path.join(BASE_DIR, 'assets', 'blank_img.png')
+    airplane_img_path = os.path.join(BASE_DIR, 'assets', 'helper_circle.png')
+
+
    
     #button class with click
     class Button():
@@ -96,7 +106,7 @@ def Main():
     n=m+q
     
     #Load correct data
-    correct_data_pd = pd.read_csv('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/correct_data.csv', header = None)
+    correct_data_pd = pd.read_csv(correct_data_path, header = None)
     #create correct data list
     correct_data = []
     for row in range(620):
@@ -107,22 +117,22 @@ def Main():
         correct_data.append(correct_data_row)
     
     #load images
-    themap_img=pygame.image.load('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/AllegiantMap.png').convert_alpha()
+    themap_img=pygame.image.load(map_img_path).convert_alpha()
     themap_img = pygame.transform.scale(themap_img, (1910/2, 1235/2))
-    calc_img = pygame.image.load('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/calc_img.png').convert_alpha()
-    again_img = pygame.image.load('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/again_img.png').convert_alpha()
+    calc_img = pygame.image.load(calc_img_path).convert_alpha()
+    again_img = pygame.image.load(again_img_path).convert_alpha()
     
     #helper box load
-    helperbox_img = pygame.image.load('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/helper_circle.png').convert_alpha()
+    helperbox_img = pygame.image.load(airplane_img_path).convert_alpha()
     helperbox_img=pygame.transform.scale(helperbox_img,(TILE_SIZE,TILE_SIZE))
     
     #store tiles in a list
     img_list=[]
     for x in range(TILE_TYPES):
-        img=pygame.image.load(f'C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/{x}.png').convert_alpha()
+        img=pygame.image.load(f'{tile_path}/{x}.png').convert_alpha()
         img=pygame.transform.scale(img,(TILE_SIZE,TILE_SIZE))
         img_list.append(img)
-    blank_img=pygame.image.load('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/blank.png').convert_alpha()
+    blank_img=pygame.image.load(blank_img_path).convert_alpha()
     blank_img=pygame.transform.scale(blank_img,(TILE_SIZE,TILE_SIZE))
         
     #create a random shuffle list for the dictionary
