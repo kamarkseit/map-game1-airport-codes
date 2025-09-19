@@ -14,10 +14,15 @@ Tech Stack:
 - CSV (data persistence)
 
 Installation:
-git clone https://github.com/kamarkseit/map-game1-airport-codes.git
-cd map-game-airport-codes
-pip install -r requirements.txt
-python main.py
+-Create a folder "testMapGame"
+-Change directory to the folder: cd ...\testMapGame
+-Clone repo: git clone https://github.com/kamarkseit/map-game1-airport-codes.git
+-Open Anaconda Prompt
+-Create an environment: conda create -n mapgame-env python=3.10
+-Activate it: conda activate mapgame-env
+-Change directory: cd ...\testMapGame
+-Install dependencies: pip install -r requirements.txt
+-Run the game: python main.py
 
 Architecture Notes:
 - `main.py`: Game loop, event handling, scoring logic
