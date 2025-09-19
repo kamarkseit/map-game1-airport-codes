@@ -275,14 +275,14 @@ TYSAVLUSACHAGSPMYRCHSSAVJAXSFBMLBPBIFLLPGD'
             #     writer = csv.writer(csvfile, delimiter = ',')
             #     for row in gamer_answers:
             #         writer.writerow(row)
-            with open(answers_path, 'w', newline='') as csvfile:
+            with open(gamer_answers_path, 'w', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter = ',')
                 for row in gamer_answers:
                     writer.writerow(row)
             # gamer_answers_pd = pd.read_csv('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/gamer_answers.csv', header=None, names = ['y','x','z'])
             # correct_answers_pd = pd.read_csv('C:/Users/Kamila/OneDrive/Desktop/Project0/map_game/correct_answers.csv', header=None, names = ['y','x','z'])
-            gamer_answers_pd = pd.read_csv(answers_path, header=None, names=['y', 'x', 'z'])
-            correct_answers_pd = pd.read_csv(correct_path, header=None, names=['y', 'x', 'z'])
+            gamer_answers_pd = pd.read_csv(gamer_answers_path, header=None, names=['y', 'x', 'z'])
+            correct_answers_pd = pd.read_csv(correct_answers_path, header=None, names=['y', 'x', 'z'])
             for i in range(q):    
                 if (correct_answers_pd.loc[correct_answers_pd['z']==z[i], 'y'].item()-6) < gamer_answers_pd['y'].iloc[i]\
                     and (correct_answers_pd.loc[correct_answers_pd['z']==z[i], 'y'].item()+6) > gamer_answers_pd['y'].iloc[i]\
