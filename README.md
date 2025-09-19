@@ -22,7 +22,7 @@ Installation:
 -Activate it: conda activate mapgame-env
 -Change directory: cd ...\testMapGame
 -Install dependencies: pip install -r requirements.txt
--Run the game: python main.py
+-Run the game: python MapGame_v2.py
 
 Architecture Notes:
 - `main.py`: Game loop, event handling, scoring logic
