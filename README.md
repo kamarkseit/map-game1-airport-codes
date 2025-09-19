@@ -7,14 +7,14 @@ Gameplay:
 - Accuracy is measured by proximity (±6 pixels) to the correct coordinates.
 - Incorrect guesses are listed at the end of each round.
 
-Teck Stack:
+Tech Stack:
 - Python 3.10+
 - Pygame (UI and event handling)
 - Pandas (answer validation)
 - CSV (data persistence)
 
 Installation:
-git clone https://github.com/kamarkseit/map-game-airport-codes.git
+git clone https://github.com/kamarkseit/map-game1-airport-codes.git
 cd map-game-airport-codes
 pip install -r requirements.txt
 python main.py
