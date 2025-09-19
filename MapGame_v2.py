@@ -18,10 +18,10 @@ def Main():
     gamer_data_path = os.path.join(BASE_DIR, 'data', 'gamer_data.csv')
     tile_path = os.path.join(BASE_DIR, 'assets', 'tiles')
     map_img_path = os.path.join(BASE_DIR, 'assets', 'AllegiantMap.png')
-    calc_img_path = os.path.join(BASE_DIR, 'assets', 'calc_img.png')
-    again_img_path = os.path.join(BASE_DIR, 'assets', 'again_img.png')
-    blank_img_path = os.path.join(BASE_DIR, 'assets', 'blank_img.png')
-    airplane_img_path = os.path.join(BASE_DIR, 'assets', 'helper_circle.png')
+    calc_img_path = os.path.join(BASE_DIR, 'assets', 'ui', 'calc_img.png')
+    again_img_path = os.path.join(BASE_DIR, 'assets', 'ui', 'again_img.png')
+    blank_img_path = os.path.join(BASE_DIR, 'assets', 'ui', 'blank_img.png')
+    airplane_img_path = os.path.join(BASE_DIR, 'assets', 'ui', 'helper_circle.png')
 
 
    
